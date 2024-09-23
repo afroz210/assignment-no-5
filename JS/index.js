@@ -4,20 +4,25 @@ const nokhaliDonateButton = document
   .addEventListener("click", function (event) {
     event.preventDefault();
 
-    const noakhaliDonationAmount = getInputValueById('noakhali-donation-amount');
-    const amountForNoakhali = getTextFieldValueById('amount-for-noakhali');
-    const mainAmount = getTextFieldValueById('main-amount');
+    const noakhaliDonationAmount = getInputValueById(
+      "noakhali-donation-amount"
+    );
+    const amountForNoakhali = getTextFieldValueById("amount-for-noakhali");
+    const mainAmount = getTextFieldValueById("main-amount");
+    const noakhaliTitle = getTextFieldValueByIdForText("nokhali-title-id");
 
     // if(isNaN(noakhaliDonationAmount)){
     //     alert('')
     // }
 
-    const totalAmountOfNoakhali = noakhaliDonationAmount + amountForNoakhali ;
-    const mainAmountMinus = mainAmount - totalAmountOfNoakhali
+    const totalAmountOfNoakhali = noakhaliDonationAmount + amountForNoakhali;
+    const mainAmountMinus = mainAmount - totalAmountOfNoakhali;
 
-    document.getElementById('amount-for-noakhali').innerText = totalAmountOfNoakhali;
-    document.getElementById('main-amount').innerText = mainAmountMinus;
+    document.getElementById("amount-for-noakhali").innerText =
+      totalAmountOfNoakhali;
+    document.getElementById("main-amount").innerText = mainAmountMinus;
 
+    createHistoryElement(noakhaliDonationAmount, noakhaliTitle);
   });
 
 const feniDonateButton = document
@@ -25,16 +30,18 @@ const feniDonateButton = document
   .addEventListener("click", function (event) {
     event.preventDefault();
 
-    const feniDonationAmount = getInputValueById('feni-donation-amount');
-    const amountForFeni = getTextFieldValueById('amount-for-feni');
-    const mainAmount2 = getTextFieldValueById('main-amount');
+    const feniDonationAmount = getInputValueById("feni-donation-amount");
+    const amountForFeni = getTextFieldValueById("amount-for-feni");
+    const mainAmount2 = getTextFieldValueById("main-amount");
+    const feniTitle = getTextFieldValueByIdForText("feni-title-id");
 
-    const totalAmountOfFeni = feniDonationAmount + amountForFeni ;
-    const mainAmountMinus2 = mainAmount2 - totalAmountOfFeni
+    const totalAmountOfFeni = feniDonationAmount + amountForFeni;
+    const mainAmountMinus2 = mainAmount2 - totalAmountOfFeni;
 
-    document.getElementById('amount-for-feni').innerText = totalAmountOfFeni;
-    document.getElementById('main-amount').innerText = mainAmountMinus2
+    document.getElementById("amount-for-feni").innerText = totalAmountOfFeni;
+    document.getElementById("main-amount").innerText = mainAmountMinus2;
 
+    createHistoryElement(feniDonationAmount, feniTitle);
   });
 
 const quotaDonateButton = document
@@ -42,16 +49,18 @@ const quotaDonateButton = document
   .addEventListener("click", function (event) {
     event.preventDefault();
 
-    const quotaDonationAmount = getInputValueById('quota-donation-amount');
-    const amountForQuota = getTextFieldValueById('amount-for-quota');
-    const mainAmount3 = getTextFieldValueById('main-amount');
+    const quotaDonationAmount = getInputValueById("quota-donation-amount");
+    const amountForQuota = getTextFieldValueById("amount-for-quota");
+    const mainAmount3 = getTextFieldValueById("main-amount");
+    const quotaTitle = getTextFieldValueByIdForText("quota-title-id");
 
-    const totalAmountOfQuota = quotaDonationAmount + amountForQuota ;
-    const mainAmountMinus3 = mainAmount3 - totalAmountOfQuota
+    const totalAmountOfQuota = quotaDonationAmount + amountForQuota;
+    const mainAmountMinus3 = mainAmount3 - totalAmountOfQuota;
 
-    document.getElementById('amount-for-quota').innerText = totalAmountOfQuota;
-    document.getElementById('main-amount').innerText = mainAmountMinus3
+    document.getElementById("amount-for-quota").innerText = totalAmountOfQuota;
+    document.getElementById("main-amount").innerText = mainAmountMinus3;
 
+    createHistoryElement(quotaDonationAmount, quotaTitle);
   });
 
 //   history items
