@@ -11,9 +11,10 @@ const nokhaliDonateButton = document
     const mainAmount = getTextFieldValueById("main-amount");
     const noakhaliTitle = getTextFieldValueByIdForText("nokhali-title-id");
 
-    // if(isNaN(noakhaliDonationAmount)){
-    //     alert('')
-    // }
+    if(isNaN(noakhaliDonationAmount) || noakhaliDonationAmount <=0){
+        alert('Invalid Donation Amount');
+        return;
+    }
 
     const totalAmountOfNoakhali = noakhaliDonationAmount + amountForNoakhali;
     const mainAmountMinus = mainAmount - totalAmountOfNoakhali;
@@ -35,6 +36,10 @@ const feniDonateButton = document
     const mainAmount2 = getTextFieldValueById("main-amount");
     const feniTitle = getTextFieldValueByIdForText("feni-title-id");
 
+    if(isNaN(feniDonationAmount) || feniDonationAmount<=0){
+      alert('Invalid Donation Amount');
+  }
+
     const totalAmountOfFeni = feniDonationAmount + amountForFeni;
     const mainAmountMinus2 = mainAmount2 - totalAmountOfFeni;
 
@@ -54,6 +59,10 @@ const quotaDonateButton = document
     const mainAmount3 = getTextFieldValueById("main-amount");
     const quotaTitle = getTextFieldValueByIdForText("quota-title-id");
 
+    if(isNaN(quotaDonationAmount) || quotaDonationAmount<=0){
+      alert('Invalid Donation Amount');
+  }
+
     const totalAmountOfQuota = quotaDonationAmount + amountForQuota;
     const mainAmountMinus3 = mainAmount3 - totalAmountOfQuota;
 
@@ -63,12 +72,21 @@ const quotaDonateButton = document
     createHistoryElement(quotaDonationAmount, quotaTitle);
   });
 
-//   history items
+//history button
 
-// const historyItem = document.createElement('div'){
+const historyButton = document.getElementById('history-btn-id').addEventListener('click' , function(){
+ createHistoryElement(historyButton);
+ console.log(historyButton);
+ getTextFieldValueByIdForText('donation-section-id').classList.add('hidden');
+ getTextFieldValueByIdForText('dtails-history').classList.remove('hidden');
+ console.log('click' , historyButton)
+});
 
-//     historyItem.className = 'border border-gray-500 rounded-lg p-8';
-//     historyItem.innerHTML = `
-//     <p>${getElementById(id)} Taka is Donated</p>
-//     `
-// };
+//donation button
+const donationButton = document.getElementById('donation-btn-id').addEventListener('click' , function(){
+ createHistoryElement(donationButton);
+ console.log(donationButton);
+ document.getElementById('donation-section-id').classList.remove('hidden');
+ document.getElementById('dtails-history').classList.add('hidden');
+ console.log('click' , donationButton);
+});

@@ -19,7 +19,7 @@ function createHistoryElement(amount, title) {
   const historyItemDate = "Date : " + new Date();
   const createHistoryElement = document.createElement('div');
 
-  createHistoryElement.className = 'border border-gray-500 rounded-lg mt-4 lg:mx-36 p-6';
+  createHistoryElement.className = 'border border-gray-300 rounded-lg mt-4 lg:mx-36 p-6';
 
   createHistoryElement.innerHTML = `
   
@@ -30,3 +30,5 @@ function createHistoryElement(amount, title) {
   const historyContainer = document.getElementById('dtails-history');
   historyContainer.insertBefore(createHistoryElement, historyContainer.firstChild);
 }
+
+
