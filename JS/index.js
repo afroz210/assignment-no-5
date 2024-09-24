@@ -25,7 +25,7 @@ const nokhaliDonateButton = document
 
     document.getElementById("main-amount").innerText = mainAmountMinus;
 
-//history
+    //history
     createHistoryElement(noakhaliDonationAmount, noakhaliTitle);
   });
 
@@ -80,16 +80,16 @@ const quotaDonateButton = document
 const donationButton = document
   .getElementById("donation-btn-id")
   .addEventListener("click", function () {
-    document.getElementById("donation-btn-id").classList.add("bg-lime-300");
-    document.getElementById("history-btn-id").classList.remove("bg-lime-300" , 'text-gray-500');
+    document.getElementById("donation-btn-id").classList.add("bg-lime-300", 'text-black');
+    document.getElementById("donation-btn-id").classList.remove("text-gray-700" , "border-gray-300");
+
+    //for history btn
+    document.getElementById("history-btn-id").classList.remove("bg-lime-300", 'text-black');
+    document.getElementById("history-btn-id").classList.add("text-gray-700" , "border-gray-300");
 
     document.getElementById("donation-section-id").classList.remove("hidden");
     document.getElementById("dtails-history").classList.add("hidden");
 
-    document.getElementById("donation-btn-id").classList.remove("text-gray-500" , 'border-gray-300');
-    document.getElementById("history-btn-id").classList.add("border-gray-300");
-
-    
   });
 
 //history button
@@ -97,12 +97,14 @@ const donationButton = document
 const historyButton = document
   .getElementById("history-btn-id")
   .addEventListener("click", function () {
-    document.getElementById("history-btn-id").classList.add("bg-lime-300");
-    document.getElementById("donation-btn-id").classList.remove("bg-lime-300" , 'text-gray-500');
+    document.getElementById("history-btn-id").classList.add("bg-lime-300", "text-black");
+    document.getElementById("history-btn-id").classList.remove("text-gray-700" ,"border-gray-300");
+
+    // for donaion btn
+    document.getElementById("donation-btn-id").classList.add("text-gray-700" , "border-gray-300");
+    document.getElementById("donation-btn-id").classList.remove("bg-lime-300", "text-black");
 
     document.getElementById("donation-section-id").classList.add("hidden");
     document.getElementById("dtails-history").classList.remove("hidden");
 
-    document.getElementById("donation-btn-id").classList.add("text-gray-500" , 'border-gray-300');
-    document.getElementById("history-btn-id").classList.remove("border-gray-300");
   });

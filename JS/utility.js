@@ -1,4 +1,3 @@
-//console.log('hi')
 //for input value
 function getInputValueById(id) {
   const value = parseFloat(document.getElementById(id).value);
