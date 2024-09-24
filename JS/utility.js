@@ -17,19 +17,20 @@ function getTextFieldValueByIdForText(id) {
 function createHistoryElement(amount, title) {
   const historyItemTitle = `${amount} Taka is Donated for ${title}`;
   const historyItemDate = "Date : " + new Date();
-  const createHistoryElement = document.createElement('div');
+  const createHistoryElement = document.createElement("div");
 
-  createHistoryElement.className = 'border border-gray-300 rounded-lg mt-4 lg:mx-36 p-6';
+  createHistoryElement.className =
+    "border border-gray-300 rounded-lg mt-4 lg:mx-36 p-6";
 
   createHistoryElement.innerHTML = `
   
   <p class='text-[20px] font-bold'>${historyItemTitle}</p>
   <p class='font-[300px] text-gray-500 mt-2'>${historyItemDate}</p>
 
-   `
-  const historyContainer = document.getElementById('dtails-history');
-  historyContainer.insertBefore(createHistoryElement, historyContainer.firstChild);
+   `;
+  const historyContainer = document.getElementById("dtails-history");
+  historyContainer.insertBefore(
+    createHistoryElement,
+    historyContainer.firstChild
+  );
 }
-
-
-

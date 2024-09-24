@@ -1,156 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://kit.fontawesome.com/1cc74fee55.js"
-            crossorigin="anonymous"></script>
-        <link
-            href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
-            rel="stylesheet" type="text/css" />
-        <script src="https://cdn.tailwindcss.com"></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
-            rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/1cc74fee55.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
 
-        <title>Assignment No 5</title>
+    <title>Assignment No 5</title>
 
-        <style>
-        .lexend-font{
-            font-family: "Lexend", sans-serif;
-        }
+    <style>
+      .lexend-font {
+        font-family: "Lexend", sans-serif;
+      }
     </style>
-    </head>
-    <body class="lexend-font">
-
-        <header class="bg-[#F9F7F3]">
-            <div class="container mx-auto pt-6 pb-10 px-8">
-                <!-- navsection -->
-                <nav class="lg:flex justify-between lg:px-28">
-                    <div>
-                        <button id="blog"
-                            class="btn bg-lime-300 text-black font-[600] text-[20px]"><a
-                                href="./index.html">Home</a></button>
-                    </div>
-                    <!-- logo -->
-                    <div class="flex gap-2 mt-4 lg:mt-0 w-[300px]">
-                        <img class="h-[80%]" src="./assets/logo.png" alt>
-                        <p class="font-[700] text-[20px] pt-3">Donate
-                            Bangladesh</p>
-                    </div>
-                    <!-- coin -->
-                    <div class="flex gap-2 pt-[10px] lg:mt-0 mt-3">
-                        <img class="h-[80%]" src="./assets/coin.png" alt>
-                        <p class="font-[600] text-[20px] text-[#111111B3]">
-                            <span id="main-amount">5500</span>BDT</p>
-                    </div>
-                </nav>
+  </head>
+  <body class="lexend-font">
+    
+    <header class="bg-[#F9F7F3]">
+        <div class="container mx-auto pt-6 pb-10 px-8">
+          <!-- navsection -->
+          <nav class="lg:flex justify-between lg:px-28">
+            <div>
+              <button
+                id="blog"
+                class="btn bg-lime-300 text-black font-[600] text-[20px]"
+              >
+                <a href="./index.html">Home</a>
+              </button>
             </div>
-        </header>
-
-        <!-- FAQ part -->
-         <div class="container mx-auto pt-6 pb-10 lg:px-[250px] px-6 md:mt-16 mt-4">
-        <h1 class="font-extrabold lg:text-[3.25rem] text-4xl mb-6">Important FAQ 💬</h1>
-        <div class="join join-vertical w-full">
-
-            <div class="collapse collapse-arrow border join-item ">
-                <input type="radio" name="my-accordion-2" checked="checked" />
-                <div class="collapse-title text-xl font-bold">What is the
-                    Document of Object Model (DOM)?</div>
-                <div class="collapse-content">
-                    <p class>The Document Object Model is a programming
-                        interface for web documents. It represents the page so
-                        that programs can change the document structure, style
-                        and content.</p>
-                </div>
+            <!-- logo -->
+            <div class="flex gap-2 mt-4 lg:mt-0 w-[300px]">
+              <img class="h-[80%]" src="./assets/logo.png" alt />
+              <p class="font-[700] text-[20px] pt-3 text-black">Donate Bangladesh</p>
             </div>
-
-            <div class="collapse collapse-arrow border join-item ">
-                <input type="radio" name="my-accordion-2" />
-                <div class="collapse-title text-xl font-bold">How do you select
-                    an element from DOM?</div>
-                <div class="collapse-content">
-                    <p> <span class="font-medium">To select an element from the
-                            DOM in JavaScript, you can use one of the following
-                            methods:</span> <br> <br>
-                        <span class="font-medium">1. By Id :</span>
-                        document.getElementById('elementId');<br>
-                        <span class="font-medium">1. By Id :</span>
-                        document.getElementById('elementId');<br>
-                        <span class="font-medium"> 2. By Class :</span>
-                        document.getElementsById('className'); <br>
-                        <span class="font-medium"> 3. By Tag :</span>
-                        document.getElementsById('tagName');<br>
-                        <span class="font-medium">4. By CSS Selector :</span>
-                        <span class="font-medium">a.</span>
-                        document.querySelector('selector') //For single elements
-                        <br> <span class="font-medium">b.</span>
-                        document.querySelectorAll('selector') //For multiple
-                        elements
-                    </p>
-                </div>
+            <!-- coin -->
+            <div class="flex gap-2 pt-[10px] lg:mt-0 mt-3">
+              <img class="h-[80%]" src="./assets/coin.png" alt />
+              <p class="font-[600] text-[20px] text-gray-700">
+                <span id="main-amount">5500</span>BDT
+              </p>
             </div>
-
-            <div class="collapse collapse-arrow border join-item ">
-                <input type="radio" name="my-accordion-2" />
-                <div class="collapse-title text-xl font-bold">What is event
-                    delegation in the context of the DOM and why is it
-                    useful?</div>
-                <div class="collapse-content">
-                    <p>Event delegation is a technique in the DOM where you
-                        attach a single event listener to a parent element
-                        instead of individual child elements. This listener
-                        catches events from child elements as they "bubble up"
-                        through the DOM (event bubbling). <br><br>
-
-                        <span class="font-medium">Why it's useful :</span> <br>
-                        <span class="font-medium"> 1. Performance:</span>
-                        Reduces memory use by avoiding multiple event
-                        listeners.<br>
-                        <span class="font-medium">2. Dynamic elements:</span>
-                        Handles events for elements added to the DOM later.<br>
-                        <span class="font-medium">3. Simplified code:</span>
-                        Manages events in one place, even for many child
-                        elements.
-                    </p>
-                </div>
-            </div>
-
-            <div class="collapse collapse-arrow border join-item ">
-                <input type="radio" name="my-accordion-2" />
-                <div class="collapse-title text-xl font-bold">How do you
-                    manipulate an element's attributes and styles using the
-                    DOM?</div>
-                <div class="collapse-content">
-                    <p class="font-medium">To manipulate an element's attributes
-                        and styles using the DOM, you can use the following
-                        methods:<br> <br>
-                        <span class="font-medium">1. Attributes :</span><br>
-                        <span class="font-medium">a.Get an attribute :</span>
-                        element.getAttribute('attributeName'); <br>
-                        <span class="font-medium">a.Set an attribute :</span>
-                        element.setAttribute('attributeName','value'); <br>
-                        <span class="font-medium"> a.Remove an attribute :
-                        </span>element.removeAttribute('attributeName');
-                        <br><br>
-                        <span class="font-medium">2. Styles :</span> <br>
-                        <span class="font-medium">a. Directly modify styles
-                            :</span> element.style.property = 'value';<br>
-                        //Example : element.style.color = 'red'; <br>
-                        <span class="font-medium"> b. Modify multiple styles
-                            with :</span> element.style.cssText =
-                        'color: red; background-color: yellow;'; <br>
-                        <span class="font-medium"> c. Add or remove classes
-                            :</span> element.classList.add('className'); <br>
-                        element.classList.remove('className'); <br>
-                        element.classList.toggle('className');
-                    </p>
-                </div>
-            </div>
-
+          </nav>
         </div>
+
+    </header>
+
+    <!-- FAQ part -->
+    <div class="container mx-auto pt-6 pb-10 lg:px-[250px] px-6 md:mt-16 mt-4">
+      <h1 class="font-extrabold lg:text-[3.25rem] text-4xl mb-6">
+        Important FAQ 💬
+      </h1>
+      <div class="join join-vertical w-full">
+        <div class="collapse collapse-arrow border join-item">
+          <input type="radio" name="my-accordion-2" checked="checked" />
+          <div class="collapse-title text-xl font-bold">
+            What is the Document of Object Model (DOM)?
+          </div>
+          <div class="collapse-content">
+            <p class>
+              The Document Object Model is a programming interface for web
+              documents. It represents the page so that programs can change the
+              document structure, style and content.
+            </p>
+          </div>
         </div>
-    </body>
+
+        <div class="collapse collapse-arrow border join-item">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-xl font-bold">
+            How do you select an element from DOM?
+          </div>
+          <div class="collapse-content">
+            <p>
+              <span class="font-medium"
+                >To select an element from the DOM in JavaScript, you can use
+                one of the following methods:</span
+              >
+              <br />
+              <br />
+              <span class="font-medium">1. By Id :</span>
+              document.getElementById('elementId');<br />
+              <span class="font-medium">1. By Id :</span>
+              document.getElementById('elementId');<br />
+              <span class="font-medium"> 2. By Class :</span>
+              document.getElementsById('className'); <br />
+              <span class="font-medium"> 3. By Tag :</span>
+              document.getElementsById('tagName');<br />
+              <span class="font-medium">4. By CSS Selector :</span>
+              <span class="font-medium">a.</span>
+              document.querySelector('selector') //For single elements
+              <br />
+              <span class="font-medium">b.</span>
+              document.querySelectorAll('selector') //For multiple elements
+            </p>
+          </div>
+        </div>
+
+        <div class="collapse collapse-arrow border join-item">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-xl font-bold">
+            What is event delegation in the context of the DOM and why is it
+            useful?
+          </div>
+          <div class="collapse-content">
+            <p>
+              Event delegation is a technique in the DOM where you attach a
+              single event listener to a parent element instead of individual
+              child elements. This listener catches events from child elements
+              as they "bubble up" through the DOM (event bubbling). <br /><br />
+
+              <span class="font-medium">Why it's useful :</span>
+              <br />
+              <span class="font-medium"> 1. Performance:</span>
+              Reduces memory use by avoiding multiple event listeners.<br />
+              <span class="font-medium">2. Dynamic elements:</span>
+              Handles events for elements added to the DOM later.<br />
+              <span class="font-medium">3. Simplified code:</span>
+              Manages events in one place, even for many child elements.
+            </p>
+          </div>
+        </div>
+
+        <div class="collapse collapse-arrow border join-item">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-xl font-bold">
+            How do you manipulate an element's attributes and styles using the
+            DOM?
+          </div>
+          <div class="collapse-content">
+            <p class="font-medium">
+              To manipulate an element's attributes and styles using the DOM,
+              you can use the following methods:<br />
+              <br />
+              <span class="font-medium">1. Attributes :</span><br />
+              <span class="font-medium">a.Get an attribute :</span>
+              element.getAttribute('attributeName'); <br />
+              <span class="font-medium">a.Set an attribute :</span>
+              element.setAttribute('attributeName','value'); <br />
+              <span class="font-medium"> a.Remove an attribute : </span
+              >element.removeAttribute('attributeName'); <br /><br />
+              <span class="font-medium">2. Styles :</span> <br />
+              <span class="font-medium">a. Directly modify styles :</span>
+              element.style.property = 'value';<br />
+              //Example : element.style.color = 'red'; <br />
+              <span class="font-medium"> b. Modify multiple styles with :</span>
+              element.style.cssText = 'color: red; background-color: yellow;';
+              <br />
+              <span class="font-medium"> c. Add or remove classes :</span>
+              element.classList.add('className');
+              <br />
+              element.classList.remove('className'); <br />
+              element.classList.toggle('className');
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
