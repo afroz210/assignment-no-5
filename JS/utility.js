@@ -34,3 +34,9 @@ function createHistoryElement(amount, title) {
     historyContainer.firstChild
   );
 }
+
+//clean input field
+
+function cleanInputField(id){
+  document.getElementById(id).value = ''; 
+}

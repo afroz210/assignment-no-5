@@ -29,6 +29,8 @@ const nokhaliDonateButton = document
     createHistoryElement(noakhaliDonationAmount, noakhaliTitle);
 //modal call
     document.getElementById("modal-of-noakhali").showModal();
+//call clean input
+    cleanInputField('noakhali-donation-amount');
   });
 
 //feni
@@ -60,6 +62,8 @@ const feniDonateButton = document
     createHistoryElement(feniDonationAmount, feniTitle);
     //modal call
     document.getElementById("modal-of-feni").showModal();
+    //call clean input
+    cleanInputField('feni-donation-amount');
   });
 
 //quota
@@ -91,6 +95,8 @@ const quotaDonateButton = document
     createHistoryElement(quotaDonationAmount, quotaTitle);
     //modal call
     document.getElementById("modal-of-quota").showModal();
+    //call clean input
+    cleanInputField('quota-donation-amount');
   });
 
 //donation button
