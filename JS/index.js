@@ -8,12 +8,13 @@ const nokhaliDonateButton = document
       "noakhali-donation-amount"
     );
     const amountForNoakhali = getTextFieldValueById("amount-for-noakhali");
+
     const mainAmount = getTextFieldValueById("main-amount");
     const noakhaliTitle = getTextFieldValueByIdForText("nokhali-title-id");
 
-    if(isNaN(noakhaliDonationAmount) || noakhaliDonationAmount <=0){
-        alert('Invalid Donation Amount');
-        return;
+    if (isNaN(noakhaliDonationAmount) || noakhaliDonationAmount <= 0) {
+      alert("Invalid Donation Amount");
+      return;
     }
 
     const totalAmountOfNoakhali = noakhaliDonationAmount + amountForNoakhali;
@@ -21,8 +22,10 @@ const nokhaliDonateButton = document
 
     document.getElementById("amount-for-noakhali").innerText =
       totalAmountOfNoakhali;
+
     document.getElementById("main-amount").innerText = mainAmountMinus;
 
+//history
     createHistoryElement(noakhaliDonationAmount, noakhaliTitle);
   });
 
@@ -36,9 +39,9 @@ const feniDonateButton = document
     const mainAmount2 = getTextFieldValueById("main-amount");
     const feniTitle = getTextFieldValueByIdForText("feni-title-id");
 
-    if(isNaN(feniDonationAmount) || feniDonationAmount<=0){
-      alert('Invalid Donation Amount');
-  }
+    if (isNaN(feniDonationAmount) || feniDonationAmount <= 0) {
+      alert("Invalid Donation Amount");
+    }
 
     const totalAmountOfFeni = feniDonationAmount + amountForFeni;
     const mainAmountMinus2 = mainAmount2 - totalAmountOfFeni;
@@ -59,9 +62,9 @@ const quotaDonateButton = document
     const mainAmount3 = getTextFieldValueById("main-amount");
     const quotaTitle = getTextFieldValueByIdForText("quota-title-id");
 
-    if(isNaN(quotaDonationAmount) || quotaDonationAmount<=0){
-      alert('Invalid Donation Amount');
-  }
+    if (isNaN(quotaDonationAmount) || quotaDonationAmount <= 0) {
+      alert("Invalid Donation Amount");
+    }
 
     const totalAmountOfQuota = quotaDonationAmount + amountForQuota;
     const mainAmountMinus3 = mainAmount3 - totalAmountOfQuota;
@@ -72,21 +75,34 @@ const quotaDonateButton = document
     createHistoryElement(quotaDonationAmount, quotaTitle);
   });
 
+//donation button
+
+const donationButton = document
+  .getElementById("donation-btn-id")
+  .addEventListener("click", function () {
+    document.getElementById("donation-btn-id").classList.add("bg-lime-300");
+    document.getElementById("history-btn-id").classList.remove("bg-lime-300" , 'text-gray-500');
+
+    document.getElementById("donation-section-id").classList.remove("hidden");
+    document.getElementById("dtails-history").classList.add("hidden");
+
+    document.getElementById("donation-btn-id").classList.remove("text-gray-500" , 'border-gray-300');
+    document.getElementById("history-btn-id").classList.add("border-gray-300");
+
+    
+  });
+
 //history button
 
-const historyButton = document.getElementById('history-btn-id').addEventListener('click' , function(){
- createHistoryElement(historyButton);
- console.log(historyButton);
- getTextFieldValueByIdForText('donation-section-id').classList.add('hidden');
- getTextFieldValueByIdForText('dtails-history').classList.remove('hidden');
- console.log('click' , historyButton)
-});
+const historyButton = document
+  .getElementById("history-btn-id")
+  .addEventListener("click", function () {
+    document.getElementById("history-btn-id").classList.add("bg-lime-300");
+    document.getElementById("donation-btn-id").classList.remove("bg-lime-300" , 'text-gray-500');
 
-//donation button
-const donationButton = document.getElementById('donation-btn-id').addEventListener('click' , function(){
- createHistoryElement(donationButton);
- console.log(donationButton);
- document.getElementById('donation-section-id').classList.remove('hidden');
- document.getElementById('dtails-history').classList.add('hidden');
- console.log('click' , donationButton);
-});
+    document.getElementById("donation-section-id").classList.add("hidden");
+    document.getElementById("dtails-history").classList.remove("hidden");
+
+    document.getElementById("donation-btn-id").classList.add("text-gray-500" , 'border-gray-300');
+    document.getElementById("history-btn-id").classList.remove("border-gray-300");
+  });

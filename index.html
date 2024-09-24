@@ -14,6 +14,7 @@
         <link
             href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
             rel="stylesheet">
+        <link rel="stylesheet" href="./styles/index.css">    
 
         <title>Assignment No 5</title>
 
@@ -50,18 +51,20 @@
         </header>
         <!-- main  -->
         <main class="container mx-auto pt-6 pb-10 px-10">
+
             <!-- donation & history button section -->
             <div class="lg:flex justify-center gap-4 mt-6">
                 <button id="donation-btn-id"
                     class="btn btn-wide bg-lime-300 font-[600] text-[20px]">Donation</button>
                 <button id="history-btn-id"
-                    class="btn btn-wide mt-4 lg:mt-0 text-gray-500 border-gray-400 font-[600] text-[20px]">History</button>
+                    class="btn btn-wide mt-4 lg:mt-0 border-gray-300 font-[600] text-[20px]">History</button>
             </div>
 
             <!-- FOR DONATION BUTTON -->
 
             <!-- card section 1 -->
-            <section id="donation-section-id"
+             <div id="donation-section-id">
+            <section
                 class="border border-gray-300 rounded-lg p-6 mt-10 lg:mx-36">
 
                 <div class="grid lg:grid-cols-2 grid-cols-1">
@@ -96,9 +99,24 @@
                             class="input input-bordered w-full mt-9"
                             id="noakhali-donation-amount"
                             placeholder="Write Donation Amount">
-                        <button id="noakhali-donate-now-btn"
-                            class="btn bg-lime-300 w-full mt-8">Donate
+                        <button id="noakhali-donate-now-btn" onclick="my_modal_5.showModal()"
+                            class="btn bg-lime-300 w-full mt-8 ">Donate
                             Now</button>
+
+                            <!-- modal -->
+                            <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                                <div class="modal-box">
+                                  <h1 class="text-[35px] font-extrabold text-center">Congrates!</h1>
+                                  <img class="ml-[210px] mt-4 w-[10%]" src="./assets/coin.png" alt="">
+                                  <p class="text-center text-gray-500 mt-6">You Have Donated For Humankind</p>
+                                  <h3 class="text-center text-[24px] font-bold mt-6">Successfully</h3>
+                                  <div class="modal-action">
+                                    <form method="dialog">
+                                      <button class="btn mr-[150px] mt-4">Close confirmation</button>
+                                    </form>
+                                  </div>
+                                </div>
+                              </dialog>
                     </div>
 
                 </div>
@@ -144,9 +162,24 @@
                             class="input input-bordered w-full mt-10"
                             id="feni-donation-amount"
                             placeholder="Write Donation Amount">
-                        <button id="feni-donate-now-btn"
+                        <button id="feni-donate-now-btn" onclick="my_modal_5.showModal()"
                             class="btn bg-lime-300 w-full mt-8">Donate
                             Now</button>
+
+                             <!-- modal -->
+                             <dialog id="my_modal_6" class="modal modal-bottom sm:modal-middle">
+                                <div class="modal-box">
+                                  <h1 class="text-[35px] font-extrabold text-center">Congrates!</h1>
+                                  <img class="ml-[210px] mt-4 w-[10%]" src="./assets/coin.png" alt="">
+                                  <p class="text-center text-gray-500 mt-6">You Have Donated For Humankind</p>
+                                  <h3 class="text-center text-[24px] font-bold mt-6">Successfully</h3>
+                                  <div class="modal-action">
+                                    <form method="dialog">
+                                      <button class="btn mr-[150px] mt-4">Close confirmation</button>
+                                    </form>
+                                  </div>
+                                </div>
+                              </dialog>
                     </div>
 
                 </div>
@@ -194,14 +227,31 @@
                             class="input input-bordered w-full mt-10"
                             id="quota-donation-amount"
                             placeholder="Write Donation Amount">
-                        <button id="quota-donate-now-btn"
+                        <button id="quota-donate-now-btn" onclick="my_modal_5.showModal()"
                             class="btn bg-lime-300 w-full mt-8">Donate
                             Now</button>
+
+                             <!-- modal -->
+                             <dialog id="my_modal_7" class="modal modal-bottom sm:modal-middle">
+                                <div class="modal-box">
+                                  <h1 class="text-[35px] font-extrabold text-center">Congrates!</h1>
+                                  <img class="ml-[210px] mt-4 w-[10%]" src="./assets/coin.png" alt="">
+                                  <p class="text-center text-gray-500 mt-6">You Have Donated For Humankind</p>
+                                  <h3 class="text-center text-[24px] font-bold mt-6">Successfully</h3>
+                                  <div class="modal-action">
+                                    <form method="dialog">
+                                      <button class="btn mr-[150px] mt-4">Close confirmation</button>
+                                    </form>
+                                  </div>
+                                </div>
+                              </dialog>
                     </div>
 
                 </div>
 
             </section>
+
+            </div>
 
             <!-- FOR HISTORY ITEM -->
             <div id="dtails-history" class="hidden">

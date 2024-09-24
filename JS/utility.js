@@ -1,19 +1,20 @@
 //console.log('hi')
+//for input value
 function getInputValueById(id) {
   const value = parseFloat(document.getElementById(id).value);
   return value;
 }
-
+// for text value
 function getTextFieldValueById(id) {
   const textValue = parseFloat(document.getElementById(id).innerText);
   return textValue;
 }
-
+//for text
 function getTextFieldValueByIdForText(id) {
   const textValue = document.getElementById(id).innerText;
   return textValue;
 }
-
+// for create history
 function createHistoryElement(amount, title) {
   const historyItemTitle = `${amount} Taka is Donated for ${title}`;
   const historyItemDate = "Date : " + new Date();
@@ -30,5 +31,6 @@ function createHistoryElement(amount, title) {
   const historyContainer = document.getElementById('dtails-history');
   historyContainer.insertBefore(createHistoryElement, historyContainer.firstChild);
 }
+
 
 
